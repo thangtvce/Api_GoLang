@@ -16,8 +16,8 @@ func main() {
 	// Đăng ký các API
 	r.POST("/register", handlers.RegisterUser)
 	r.POST("/login", handlers.LoginUser)
-	r.GET("/notifications", handlers.GetAllNotifications)
-	r.GET("/user/:id/notifications", handlers.GetUserNotifications)
+	r.GET("/notifications", handlers.GetAllUserNotifications)
+	r.GET("/user/:user_id/notifications", handlers.GetUserNotifications)
 
 	// Chạy server
 	r.Run(":8080")
